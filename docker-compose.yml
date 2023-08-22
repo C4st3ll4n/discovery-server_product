@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  discovery-service:
+    build: .
+    restart: unless-stopped
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    ports:
+      - "8761:8761"
